@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.箭头函数
+    const fn = () => {
+      console.log(6)
+    }
+    fn()
+
+    const fn2 = (a) => {
+      console.log(a)
+    }
+    fn2(666)
+
+    // 2.如果只有一个形参，小括号可以省略
+    const fn3 = b => {
+      console.log(b)
+    }
+    fn3(777)
+
+    // 3.如果只有一行代码，可以省略大括号
+    const fn4 = c => console.log(c)
+    fn4('超爱你们')
+
+    // 4.只有一行代码的时候可以省略return
+    const fn5 = (a, b) => a + b
+    console.log(fn5(1, 2))
+
+    // 需求：// 把下面的函数改为箭头函数
+    // function cb(x) {
+    //   return x * x
+    // }
+    //     // ==>
+
+    const cb = x => x * x
+    console.log(cb(2))
+
+    // 5.箭头函数可以直接返回一个对象，但是需要小括号把返回对象括起来
+    const fn6 = function (name) {
+      return { username: name }
+    }
+    console.log(fn6('傻逼'))
+
+    const fn7 = name => ({ username: name })
+    console.log(fn7('dinner'))
+  </script>
+</body>
+
+</html>
